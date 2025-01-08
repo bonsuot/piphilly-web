@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask(__name__)
-app.secret_key = 'AIzaSyADIM7bjWtnUldgdu4u7h6i9LdPF8220ko'  # Required for flash messages
 
 
 @app.route('/')
