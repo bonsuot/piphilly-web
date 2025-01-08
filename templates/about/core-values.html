@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+
+{% block title %}Core Values - PIWC Philadelphia{% endblock %}
+
+{% block content %}
+<section class="page-hero py-5">
+    <div class="container">
+        <h1 class="hero-title text-center mb-4">Core Values</h1>
+        <p class="hero-text text-center">The principles that guide our faith and service</p>
+    </div>
+</section>
+
+<section class="core-values-content py-5">
+    <div class="container">
+        <div class="values-grid">
+            <!-- Evangelism -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3>Evangelism</h3>
+                <p class="value-text">It is the presentation of Jesus Christ in the power of the Holy Spirit with the view that people will trust Jesus as Saviour and Lord and serve Him in the fellowship of the Church. Evangelism is the responsibility of every Church member and Minister. It is the prime duty of every believer to share his/her faith after conversion. Through cross-cultural, mission-oriented evangelism, Church members who travel to other countries preach Christ, plant Churches and call for Ministers to do same. Besides, as was the practice of the founder, Pastor James McKeown, we respond to calls to missions as led by the Holy Spirit.</p>
+                <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#evangelismModal">
+                    Read More <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Discipleship -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-church"></i>
+                </div>
+                <h3>Discipleship</h3>
+                <p class="value-text">Discipleship is teaching and training believers to be like Christ in character and to make responsible choices. The emphasis is on holiness, righteousness, faithfulness, honesty, sincerity, humility, prayerfulness and the leading of disciplined and responsible lives. This is done at the level of individuals, where mature members take up the responsibility to disciple new converts. The Church plays a leading role by providing systematic teaching and practical training. Such teaching emphasises the four-square gospel, which is Christ-centred: i.e. Jesus the Saviour, Healer, Baptiser and Soon-Coming King; the Tenets of the Church; Bible reading/study and scripture memorisation and application of the word to life situations. Christ-centered: Jesus the Saviour, Healer, Baptiser and Soon-Coming King</p>
+                <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#discipleshipModal">
+                    Read More <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Ministry -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Ministry Excellence</h3>
+                <p>We seek to honour God who gave His best (Christ Jesus as the Saviour) by maintaining a high standard of excellence in all our ministries and activities 
+                    Colossians 3:23-24</p>
+            </div>
+
+            <!-- Prayer -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-praying-hands"></i>
+                </div>
+                <h3>Prayer</h3>
+                <p class="value-text">Some of the normal practices are regular prayer for the Holy Spirit baptism with the initial evidence of speaking in tongues. Emphasis is placed on the fruit and gifts of the Spirit in the life of the believer. Prayers are said for healing and deliverance of the afflicted as part of the initial exercises for salvation. Services are marked as truly Pentecostal with praise and worship, teaching, exercise of gifts, prayer, testimonies, etc.</p>
+                <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#prayerModal">
+                    Read More <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Holy Spirit -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-dove"></i>
+                </div>
+                <h3>Ministry of the Holy Spirit</h3>
+                <p class="value-text">We believe in the presence of the person of the Holy Spirit and that the Christian life can be led only by His enablement. The new birth is the work of the Holy Spirit, and then the baptism of the Holy Spirit for power to serve and the gifts of the Spirit for building the body of Christ. The Holy Spirit helps the individual to develop a Christ-like character, manifested through bearing the fruit of the Spirit. The leading of the Holy Spirit in all spheres of activity in the Church is paramount. Administrative structures and all other Church distinctiveness have been largely influenced by the leading of the Holy Spirit.</p>
+                <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#holySpiritModal">
+                    Read More <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Leadership -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Leadership Development</h3>
+                <p class="value-text">Leadership development is based on the apostolic foundation. Appointments and callings into leadership positions are based on character, charisma, and the leading of the Holy Spirit. Leadership development is from the grassroot level with members maturing to lead sub-groups, Ministries, Assemblies, Districts and Areas. Team spirit with talent development shapes team work. Ministry is by both clergy and laity.</p>
+                <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#leadershipModal">
+                    Read More <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Church Culture -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>Church Culture</h3>
+                <p></p>
+            </div>
+
+            <!-- Tithes -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3>Tithes and Offering</h3>
+                <p class="value-text">Faithfulness in giving offerings and paying tithes to enhance the ministry of the Church is emphasised. Periodic teaching on this subject is regarded as very important. The Church and members depend solely on God as the source of financial supply. Borrowing by the Church is not encouraged. Lending with interest among members is also discouraged.</p>
+                <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#tithesModal">
+                    Read More <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Social -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>Social Activities</h3>
+                <p>The Church believes in communal living with members supporting one another, and participating in communal work. 
+                   The Church may also help the wider community by providing social needs such as health services, education, as well as donating to the needy in society.</p>
+            </div>
+
+            <!-- Holiness -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>Holiness of Members and Officers</h3>
+                <p>The Church upholds holiness of members unto the Lord in all their endeavours (Romans 12:1; Hebrews 12:14).</p>
+            </div>
+
+            <!-- Teaching -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>Consistent Bible Teaching</h3>
+                <p>The Church upholds the teaching of sound biblical doctrine and does not tolerate the propagation of wrong/false doctrine. 
+                    All types of prayer such as thanksgiving; worship (adoration); supplication; intercession 
+                    (Eph. 6:18-19; 1 Tim. 2:1-2).</p>
+            </div>
+
+            <!-- Discipline -->
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>Church Discipline</h3>
+                <p>Respect for and obedience to authority.
+                    Submission to corrective measures and policies of the Church.
+                    Regular fellowship of the saints (Acts 2:42-47; Hebrews 10:25).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modals Section -->
+<div class="modal fade" id="evangelismModal" tabindex="-1" aria-labelledby="evangelismModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="evangelismModalLabel">Evangelism</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>It is the presentation of Jesus Christ in the power of the Holy Spirit with the view that people will trust Jesus as Saviour and Lord and serve Him in the fellowship of the Church. Evangelism is the responsibility of every Church member and Minister. It is the prime duty of every believer to share his/her faith after conversion. Through cross-cultural, mission-oriented evangelism, Church members who travel to other countries preach Christ, plant Churches and call for Ministers to do same. Besides, as was the practice of the founder, Pastor James McKeown, we respond to calls to missions as led by the Holy Spirit.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="discipleshipModal" tabindex="-1" aria-labelledby="discipleshipModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="discipleshipModalLabel">Discipleship</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Discipleship is teaching and training believers to be like Christ in character and to make responsible choices. The emphasis is on holiness, righteousness, faithfulness, honesty, sincerity, humility, prayerfulness and the leading of disciplined and responsible lives. This is done at the level of individuals, where mature members take up the responsibility to disciple new converts. The Church plays a leading role by providing systematic teaching and practical training. Such teaching emphasises the four-square gospel, which is Christ-centred: i.e. Jesus the Saviour, Healer, Baptiser and Soon-Coming King; the Tenets of the Church; Bible reading/study and scripture memorisation and application of the word to life situations. Christ-centered: Jesus the Saviour, Healer, Baptiser and Soon-Coming King</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="prayerModal" tabindex="-1" aria-labelledby="prayerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="prayerModalLabel">Prayer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Some of the normal practices are regular prayer for the Holy Spirit baptism with the initial evidence of speaking in tongues. Emphasis is placed on the fruit and gifts of the Spirit in the life of the believer. Prayers are said for healing and deliverance of the afflicted as part of the initial exercises for salvation. Services are marked as truly Pentecostal with praise and worship, teaching, exercise of gifts, prayer, testimonies, etc.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="holySpiritModal" tabindex="-1" aria-labelledby="holySpiritModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="holySpiritModalLabel">Ministry of the Holy Spirit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>We believe in the presence of the person of the Holy Spirit and that the Christian life can be led only by His enablement. The new birth is the work of the Holy Spirit, and then the baptism of the Holy Spirit for power to serve and the gifts of the Spirit for building the body of Christ. The Holy Spirit helps the individual to develop a Christ-like character, manifested through bearing the fruit of the Spirit. The leading of the Holy Spirit in all spheres of activity in the Church is paramount. Administrative structures and all other Church distinctiveness have been largely influenced by the leading of the Holy Spirit.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="leadershipModal" tabindex="-1" aria-labelledby="leadershipModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="leadershipModalLabel">Leadership Development</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Leadership development is based on the apostolic foundation. Appointments and callings into leadership positions are based on character, charisma, and the leading of the Holy Spirit. Leadership development is from the grassroot level with members maturing to lead sub-groups, Ministries, Assemblies, Districts and Areas. Team spirit with talent development shapes team work. Ministry is by both clergy and laity.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="tithesModal" tabindex="-1" aria-labelledby="tithesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tithesModalLabel">Tithes and Offering</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Faithfulness in giving offerings and paying tithes to enhance the ministry of the Church is emphasised. Periodic teaching on this subject is regarded as very important. The Church and members depend solely on God as the source of financial supply. Borrowing by the Church is not encouraged. Lending with interest among members is also discouraged.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

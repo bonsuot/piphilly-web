@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}History - PIWC Philadelphia{% endblock %}
+
+{% block content %}
+<section class="page-hero py-5">
+    <div class="container">
+        <h1 class="hero-title text-center mb-4">Our History</h1>
+        <p class="hero-text text-center">The journey of faith that brought us here</p>
+    </div>
+</section>
+
+<section class="history-content py-5">
+    <div class="container">
+        <div class="history-cards">
+            <!-- 1937: Beginning -->
+            <div class="history-card" data-aos="fade-up">
+                <div class="history-year">
+                    <span>1937</span>
+                </div>
+                <div class="history-image">
+                    <img src="/static/images/history/church-beginning.jpg" alt="Church Beginning" class="img-fluid">
+                </div>
+                <div class="history-details">
+                    <h3>The Beginning</h3>
+                    <p>The Church of Pentecost, like most great institutions, started in a small way.</p>
+                    <p>The Church’s beginnings are linked to the ministry of Pastor James McKeown (1900-1989); an Irish missionary, was sent by the Apostolic Church, Bradford, UK, to the Gold Coast (now Ghana) to assist a group of believers led by Rev. Peter Newman in Asamankese.</p>
+                </div>
+            </div>
+
+            <!-- 1939: First Split -->
+            <div class="history-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="history-year">
+                    <span>1939</span>
+                </div>
+                <div class="history-image">
+                    <img src="/static/images/history/doctrinal-division.jpg" alt="Doctrinal Division" class="img-fluid">
+                </div>
+                <div class="history-details">
+                    <h3>Doctrinal Division</h3>
+                    <p>Due to doctrinal differences regarding divine healing, the group split in 1939 into the Christ Apostolic Church and the Apostolic Church, Gold Coast. The latter saw great expansion under Pastor James McKeown.</p>
+                </div>
+            </div>
+
+            <!-- 1953: Constitutional Crisis -->
+            <div class="history-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="history-year">
+                    <span>1953</span>
+                </div>
+                <div class="history-image">
+                    <img src="/static/images/history/constitutional-crisis.jpg" alt="Constitutional Crisis" class="img-fluid">
+                </div>
+                <div class="history-details">
+                    <h3>Constitutional Crisis</h3>
+                    <p>In 1953, a constitutional crisis led to the founding of Gold Coast Apostolic Church lead by Pastor James McKeown.</p>
+                </div>
+            </div>
+
+            <!-- 1957: Ghana Independence -->
+            <div class="history-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="history-year">
+                    <span>1957</span>
+                </div>
+                <div class="history-image">
+                    <img src="/static/images/history/ghana-independence.jpg" alt="Ghana Independence" class="img-fluid">
+                </div>
+                <div class="history-details">
+                    <h3>Name Change</h3>
+                    <p>On the attainment of independence by the country in 1957 and following the changes of its name to Ghana, the Gold Coast Apostolic Church was renamed the Ghana Apostolic Church. The split in 1953 did not end the crisis. New conflicts compelled the then President of the Republic of Ghana, His Excellency Dr Kwame Nkrumah, to advise the leadership of the Ghana Apostolic Church to adopt a new name in order to foster peace and harmony on the Pentecostal front.</p>
+                </div>
+            </div>
+
+            <!-- 1962: The Church of Pentecost -->
+            <div class="history-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="history-year">
+                    <span>1962</span>
+                </div>
+                <div class="history-image">
+                    <img src="/static/images/history/church-pentecost.jpg" alt="Church of Pentecost" class="img-fluid">
+                </div>
+                <div class="history-details">
+                    <h3>Birth of The Church of Pentecost</h3>
+                    <p>On August 1, 1962, following advice from President Dr. Kwame Nkrumah to foster peace and harmony in the Pentecostal community, the Ghana Apostolic Church was officially renamed to The Church of Pentecost.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add this before closing body tag -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        offset: 100,
+        once: true
+    });
+</script>
+{% endblock %} 

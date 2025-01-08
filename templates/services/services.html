@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services - PIWC Philadelphia{% endblock %}
+
+{% block content %}
+<section class="page-hero py-5">
+    <div class="container">
+        <h1 class="hero-title text-center mb-4">Our Services</h1>
+        <p class="hero-text text-center">Explore the various services we offer to our community.</p>
+    </div>
+</section>
+
+<section class="services py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Service Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="{{ url_for('static', filename='images/services/service1.jpg') }}" class="card-img-top" alt="Service 1">
+                    <div class="card-body">
+                        <h5 class="card-title">English Worship Services</h5>
+                        <p class="card-text">Join us every Sunday for uplifting worship and fellowship.</p>
+                        <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal" onclick="loadServiceDetails('English Worship Services')">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="{{ url_for('static', filename='images/services/service1.jpg') }}" class="card-img-top" alt="Service 1">
+                    <div class="card-body">
+                        <h5 class="card-title">French Worship Services</h5>
+                        <p class="card-text">Rejoignez-nous chaque dimanche pour un culte et une communion édifiants.</p>
+                        <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal" onclick="loadServiceDetails('French Worship Services')">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="{{ url_for('static', filename='images/services/service2.jpg') }}" class="card-img-top" alt="Service 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Bible Study</h5>
+                        <p class="card-text">Deepen your faith through our weekly Tuesday Bible study sessions.</p>
+                        <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal" onclick="loadServiceDetails('Bible Study')">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="{{ url_for('static', filename='images/services/service3.jpg') }}" class="card-img-top" alt="Service 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Community Outreach</h5>
+                        <p class="card-text">Get involved in our community outreach programs and make a difference.</p>
+                        <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#serviceModal" onclick="loadServiceDetails('Community Outreach')">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more service cards as needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="serviceModalLabel">Service Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="modalContent">Details about the service will go here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadServiceDetails(serviceName) {
+    let content = '';
+    switch(serviceName) {
+        case 'English Worship Services':
+            content = `
+                <p>You're invited to our Sunday English Service at 8:30 AM. A time of worship, fellowship, and inspiration!</p>
+                <p>Come and experience uplifting music, powerful teachings, and a welcoming community where you belong.</p>
+                <p>Whether you're new to faith or looking for a place to grow, we welcome you with open arms.</p>
+                <p>Bring your family and friends—we can't wait to worship with you!</p>
+            `;
+            break;
+        case 'French Worship Services':
+        content = `
+            <p>Vous êtes invité à notre service en anglais du dimanche à 8h30. Un moment de louange, de communion et d'inspiration !</p>
+            <p>Venez vivre une musique édifiante, des enseignements puissants et une communauté accueillante où vous avez votre place.</p>
+            <p>Que vous découvriez la foi ou que vous cherchiez un lieu pour grandir, nous vous accueillons à bras ouverts.</p>
+            <p>Amenez votre famille et vos amis—nous avons hâte de célébrer avec vous !</p>
+        `;
+        break;
+        case 'Bible Study':
+            content = `
+                <p>Deepen your faith through our weekly Tuesday Bible study sessions on Zoom at 7:00 PM.</p>
+            `;
+            break;
+        case 'Community Outreach':
+            content = `
+                <p>Get involved in our community outreach programs and make a difference.</p>
+            `;
+            break;
+        default:
+            content = 'No details available.';
+    }
+    document.getElementById('modalContent').innerHTML = content;
+}
+</script>
+
+{% endblock %}
+
+{% block styles %}
+<style>
+    .hero-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .hero-text {
+        font-size: 1.2rem;
+        color: #666;
+    }
+
+    .service-card {
+        border: 1px solid #007bff;
+        border-radius: 8px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        background-color: #f8f9fa;
+    }
+
+    .service-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2);
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        color: #007bff;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .btn-outline-primary {
+        color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: white;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}Leadership - PIWC Philadelphia{% endblock %}
+
+{% block content %}
+<section class="page-hero py-5">
+    <div class="container">
+        <h1 class="hero-title text-center mb-4">Our Leadership</h1>
+        <p class="hero-text text-center">Meet the dedicated servants leading our congregation</p>
+    </div>
+</section>
+
+<section class="leadership-content py-5">
+    <div class="container">
+        <!-- Senior Pastor -->
+        <div class="leadership-main mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="leader-image">
+                        <img src="../static/images/leaders/blank-img.png" alt="Senior Pastor" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="leader-info">
+                        <h2>Pastor Name</h2>
+                        <h4 class="leader-title">Regional Pastor</h4>
+                        <p class="leader-bio">Brief biography of the senior pastor goes here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Leaders -->
+        <div class="leadership-grid mt-5">
+            <!-- Associate Pastor -->
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="../static/images/leaders/blank-img.png" alt="Associate Pastor" class="img-fluid rounded">
+                </div>
+                <div class="leader-info">
+                    <h3>Pastor Name</h3>
+                    <h5 class="leader-title">Associate Pastor</h5>
+                    <p class="leader-bio">Brief biography of the associate pastor...</p>
+                </div>
+            </div>
+
+            <!-- Presiding Elder -->
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="../static/images/leaders/blank-img.png" alt="Presiding Elder" class="img-fluid rounded">
+                </div>
+                <div class="leader-info">
+                    <h3>Elder Name</h3>
+                    <h5 class="leader-title">Presiding Elder</h5>
+                    <p class="leader-bio">Brief biography of the presiding elder...</p>
+                </div>
+            </div>
+
+            <!-- Women's Leader -->
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="../static/images/leaders/blank-img.png" alt="Women's Leader" class="img-fluid rounded">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader Name</h3>
+                    <h5 class="leader-title">Women's Ministry Leader</h5>
+                    <p class="leader-bio">Brief biography of the women's ministry leader...</p>
+                </div>
+            </div>
+
+            <!-- Youth Leader -->
+            <div class="leader-card">
+                <div class="leader-image">
+                    <img src="../static/images/leaders/blank-img.png" alt="Youth Leader" class="img-fluid rounded">
+                </div>
+                <div class="leader-info">
+                    <h3>Leader Name</h3>
+                    <h5 class="leader-title">Youth Ministry Leader</h5>
+                    <p class="leader-bio">Brief biography of the youth ministry leader...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

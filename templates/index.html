@@ -1,0 +1,351 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Carousel -->
+<section class="hero">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../static/images/church-1.jpg');">
+                    <div class="hero-content">
+                        <h1>Welcome to PIWC Philadelphia</h1>
+                        <p>A Place of Love, Healing & Provision</p>
+                        <div class="hero-buttons">
+                            <a href="#services" class="btn btn-yellow me-3" style="background-color: #3949ab; color: white;">Join Us This Sunday</a>
+                            <a href="https://www.youtube.com/channel/UCw2yQUs1nKgTwfSqGsm1h2Q" class="btn btn-outline-yellow" target="_blank" style="background-color: #3949ab; color: white;">Watch Live</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../static/images/church-2.jpg');">
+                    <div class="hero-content">
+                        <h1>Sunday Service</h1>
+                        <p>Join us every Sunday at 08:30 AM</p>
+                        <a href="/services" class="btn btn-yellow" style="background-color: #3949ab; color: white;">View Services</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../static/images/church-3.jpg');">
+                    <div class="hero-content">
+                        <h1>Get Involved</h1>
+                        <p>Discover our various ministries and programs</p>
+                        <a href="ministries/mens_ministry" class="btn btn-yellow" style="background-color: #3949ab; color: white;">Explore Ministries</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<!-- Service Times -->
+<section id="services" class="service-times-section py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Service Times</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-4">
+                <div class="service-time-card">
+                    <div class="service-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Sunday Service</h3>
+                        <div class="time-location">
+                            <p class="time"><i class="far fa-clock"></i> 08:30 AM - 11:00 AM</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Main Sanctuary</p>
+                        </div>
+                        <a href="/services" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-md-4 mb-4">
+                <div class="service-time-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book-bible"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Bible Study</h3>
+                        <div class="time-location">
+                            <p class="time"><i class="far fa-clock"></i> Tuesdays 7:00 PM</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Zoom</p>
+                        </div>
+                        <a href="/services" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="service-time-card">
+                    <div class="service-icon">
+                        <i class="fas fa-praying-hands"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Friday Prayer Meeting</h3>
+                        <div class="time-location">
+                            <p class="time"><i class="far fa-clock"></i> Fridays 7:00 PM</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Main Sanctuary</p>
+                        </div>
+                        <a href="/services" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pastors Section -->
+<section class="pastor-section py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Meet Our Leaders</h2>
+        <div class="row align-items-center">
+            <!-- Regional Head Pastor -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="pastor-card text-center">
+                    <img src="../static/images/blank-img.png" alt="Regional Head Pastor" class="img-fluid rounded mb-4">
+                    <h3>Regional Head Pastor</h3>
+                    <p class="lead">Pastor Eric Nyamekye</p>
+                    <p class="pastor-bio">Area Head of The Church of Pentecost Pennslyvania Region, providing spiritual leadership and guidance to our congregation.</p>
+                </div>
+            </div>
+            
+            <!-- District Pastor -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="pastor-card text-center">
+                    <img src="../static/images/blank-img.png" alt="District Pastor" class="img-fluid rounded mb-4">
+                    <h3>District Pastor</h3>
+                    <p class="lead">Pastor Prince Nana Kobi</p>
+                    <p class="pastor-bio">Leading PIWC Philadelphia District with vision and dedication, fostering a community of faith and fellowship.</p>
+                </div>
+            </div>
+
+            <!-- New Pastor Card -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="pastor-card text-center">
+                    <img src="../static/images/blank-img.png" alt="Assistant Pastor" class="img-fluid rounded mb-4">
+                    <h3>Presiding Elder</h3>
+                    <p class="lead">Elder Joe Duncan</p>
+                    <p class="pastor-bio">Supporting the pastoral team with a focus on community outreach and youth engagement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Sermons -->
+<section class="sermons py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Latest Sermons</h2>
+        <div class="row">
+            <!-- Sermon 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="sermon-card">
+                    <div class="sermon-thumbnail">
+                        <img src="https://img.youtube.com/vi/9h0UAByVXbc/maxresdefault.jpg" alt="Sermon Title 1" class="img-fluid">
+                        <div class="sermon-overlay">
+                            <a href="https://www.youtube.com/watch?v=9h0UAByVXbc" class="play-btn" target="_blank">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sermon-content">
+                        <h5 class="sermon-title">The Power of Salvation</h5>
+                        <p class="sermon-date"><i class="far fa-calendar-alt"></i> December 24, 2024</p>
+                        <p class="sermon-description">Brief description of the sermon goes here. This can be a short summary of the message.</p>
+                        <div class="sermon-actions">
+                            <a href="https://www.youtube.com/watch?v=9h0UAByVXbc" class="btn btn-yellow" target="_blank">
+                                Watch Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sermon 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="sermon-card">
+                    <div class="sermon-thumbnail">
+                        <img src="https://img.youtube.com/vi/cUFcC01L-xk/maxresdefault.jpg" alt="Sermon Title 2" class="img-fluid">
+                        <div class="sermon-overlay">
+                            <a href="https://www.youtube.com/watch?v=cUFcC01L-xk" class="play-btn" target="_blank">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sermon-content">
+                        <h5 class="sermon-title">Mind Shift</h5>
+                        <p class="sermon-date"><i class="far fa-calendar-alt"></i> November 7, 2024</p>
+                        <p class="sermon-description">Brief description of the sermon goes here. This can be a short summary of the message.</p>
+                        <div class="sermon-actions">
+                            <a href="https://www.youtube.com/watch?v=cUFcC01L-xk" class="btn btn-yellow" target="_blank">
+                                Watch Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sermon 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="sermon-card">
+                    <div class="sermon-thumbnail">
+                        <img src="https://img.youtube.com/vi/i0ioQrsKrn8/maxresdefault.jpg" alt="Sermon Title 3" class="img-fluid">
+                        <div class="sermon-overlay">
+                            <a href="https://www.youtube.com/watch?v=i0ioQrsKrn8" class="play-btn" target="_blank">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sermon-content">
+                        <h5 class="sermon-title">Together We Build</h5>
+                        <p class="sermon-date"><i class="far fa-calendar-alt"></i> October 21, 2024</p>
+                        <p class="sermon-description">Brief description of the sermon goes here. This can be a short summary of the message.</p>
+                        <div class="sermon-actions">
+                            <a href="https://www.youtube.com/watch?v=i0ioQrsKrn8" class="btn btn-yellow" target="_blank">
+                                Watch Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Announcements & Events Section -->
+<section class="announcements-section py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Upcoming Events</h2>
+        <div class="announcement-grid">
+            <!-- Event Card 1 -->
+            <div class="event-card">
+                <div class="event-date">
+                    <div class="date-box">
+                        <span class="month">JAN</span>
+                        <span class="day">06</span>
+                    </div>
+                </div>
+                <div class="event-image">
+                    <img src="../static/images/events/event1.jpg" alt="National Prayer Summit">
+                    <div class="event-overlay"></div>
+                </div>
+                <div class="event-details">
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> 08:00 - 10:00 PM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Zoom</span>
+                    </div>
+                    <h3 class="event-title">National Prayer Summit</h3>
+                    <p class="event-description">Join us on ZoomID: 85794411603 PASSCODE: 919191</p>
+                    <a href="#" class="event-link" data-bs-toggle="modal" data-bs-target="#eventModal" onclick="loadEventDetails('National Prayer Summit', 'Join us on ZoomID: 85794411603 PASSCODE: 919191', '08:00 - 10:00 PM', 'Zoom')">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="event-card">
+                <div class="event-date">
+                    <div class="date-box">
+                        <span class="month">DEC</span>
+                        <span class="day">31</span>
+                    </div>
+                </div>
+                <div class="event-image">
+                    <img src="../static/images/events/new-year.jpg" alt="New Year's Eve Service">
+                    <div class="event-overlay"></div>
+                </div>
+                <div class="event-details">
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> 5:00 AM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Zoom</span>
+                    </div>
+                    <h3 class="event-title">Friday Prayer</h3>
+                    <p class="event-description">Join us every Friday morning.</p>
+                    <a href="#" class="event-link" data-bs-toggle="modal" data-bs-target="#eventModal" onclick="loadEventDetails('Friday Prayer', 'Join us every Friday morning.', '5:00 AM', 'Zoom')">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="event-card">
+                <div class="event-date">
+                    <div class="date-box">
+                        <span class="month">JAN</span>
+                        <span class="day">15</span>
+                    </div>
+                </div>
+                <div class="event-image">
+                    <img src="../static/images/events/youth-conference.jpg" alt="Youth Conference">
+                    <div class="event-overlay"></div>
+                </div>
+                <div class="event-details">
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> 2:00 PM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Fellowship Hall</span>
+                    </div>
+                    <h3 class="event-title">Youth Conference 2024</h3>
+                    <p class="event-description">Special youth conference featuring worship, workshops, and fellowship.</p>
+                    <a href="#" class="event-link" data-bs-toggle="modal" data-bs-target="#eventModal" onclick="loadEventDetails('Youth Conference 2024', 'Special youth conference featuring worship, workshops, and fellowship.', '2:00 PM', 'Fellowship Hall')">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="/events" class="view-all-btn">
+                View All Events <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eventModalLabel">Event Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="modalContent">Details about the event will go here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function loadEventDetails(title, description, time, location) {
+    document.getElementById('eventModalLabel').innerText = title;
+    document.getElementById('modalContent').innerHTML = `
+        <p><strong>Description:</strong> ${description}</p>
+        <p><strong>Time:</strong> ${time}</p>
+        <p><strong>Location:</strong> ${location}</p>
+    `;
+}
+</script>
+
+
+
+
+{% endblock %} 

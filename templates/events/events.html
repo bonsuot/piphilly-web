@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block title %}Events - PIWC Philadelphia{% endblock %}
+
+{% block content %}
+<section class="page-hero py-5">
+    <div class="container">
+        <h1 class="hero-title text-center mb-4">Upcoming Events</h1>
+        <p class="hero-text text-center">Join us for our upcoming events and activities!</p>
+    </div>
+</section>
+
+<section class="events-content py-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Search events..." id="eventSearch">
+            </div>
+            <div class="col-md-6">
+                <select class="form-select" id="eventCategory">
+                    <option value="">All Categories</option>
+                    <option value="workshop">Workshops</option>
+                    <option value="seminar">Seminars</option>
+                    <option value="community">Community Service</option>
+                </select>
+            </div>
+        </div>
+        <div class="row" id="eventCards">
+            <!-- Event Card 1 -->
+            <div class="col-md-4 mb-4 event-card" data-title="Event Title 1" data-category="workshop">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#eventModal1">
+                    <img src="{{ url_for('static', filename='images/events/new-year.jpg') }}" class="card-img-top" alt="Event 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Event Title 1</h5>
+                        <p class="card-text">Date: January 15, 2024</p>
+                        <p class="card-text">Join us for an exciting event where we will discuss...</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal1">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="col-md-4 mb-4 event-card" data-title="Event Title 2" data-category="seminar">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#eventModal2">
+                    <img src="{{ url_for('static', filename='images/events/event2.jpg') }}" class="card-img-top" alt="Event 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Event Title 2</h5>
+                        <p class="card-text">Date: February 20, 2024</p>
+                        <p class="card-text">Join us for a workshop on...</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="col-md-4 mb-4 event-card" data-title="Event Title 3" data-category="community">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#eventModal3">
+                    <img src="{{ url_for('static', filename='images/events/event3.jpg') }}" class="card-img-top" alt="Event 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Event Title 3</h5>
+                        <p class="card-text">Date: March 10, 2024</p>
+                        <p class="card-text">Don't miss our annual gathering where...</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal3">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modals for Event Details -->
+<div class="modal fade" id="eventModal1" tabindex="-1" aria-labelledby="eventModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eventModalLabel1">Event Title 1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Details about Event 1...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="eventModal2" tabindex="-1" aria-labelledby="eventModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eventModalLabel2">Event Title 2</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Details about Event 2...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="eventModal3" tabindex="-1" aria-labelledby="eventModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eventModalLabel3">Event Title 3</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Details about Event 3...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for Search Functionality -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('eventSearch');
+        const eventCards = document.querySelectorAll('.event-card');
+        const categorySelect = document.getElementById('eventCategory');
+
+        // Function to filter events based on search term and category
+        function filterEvents() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const selectedCategory = categorySelect.value;
+
+            eventCards.forEach(card => {
+                const title = card.getAttribute('data-title').toLowerCase();
+                const category = card.getAttribute('data-category');
+
+                // Check if the card matches the search term
+                const matchesSearch = title.includes(searchTerm);
+                // Check if the card matches the selected category
+                const matchesCategory = selectedCategory === '' || category === selectedCategory;
+
+                // Show or hide the card based on the filters
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = ''; // Show the card
+                } else {
+                    card.style.display = 'none'; // Hide the card
+                }
+            });
+        }
+
+        // Event listeners for search input and category select
+        searchInput.addEventListener('input', filterEvents);
+        categorySelect.addEventListener('change', filterEvents);
+    });
+</script>
+{% endblock %}

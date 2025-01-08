@@ -1,0 +1,1490 @@
+:root {
+    --primary-navy: #1B2845;
+    --primary-gold: #ffd700;
+    --secondary-blue: #3949ab;
+    --secondary-yellow: #ffecb3;
+    --white: #ffffff;
+    --off-white: #f8f9fa;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-800: #1f2937;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary-navy);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand img {
+    max-height: 60px;
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    color: var(--white) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-gold) !important;
+}
+
+.btn-yellow {
+    background-color: var(--primary-gold);
+    color: var(--primary-navy);
+    font-weight: 600;
+    border: 2px solid var(--primary-gold);
+}
+
+.btn-outline-yellow {
+    background-color: transparent;
+    color: var(--primary-gold);
+    font-weight: 600;
+    border: 2px solid var(--primary-gold);
+}
+
+.btn-outline-yellow:hover {
+    background-color: var(--primary-gold);
+    color: var(--primary-navy);
+}
+
+/* Add some spacing for fixed navbar */
+body {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    margin-top: -80px; /* Compensate for fixed navbar */
+    overflow: hidden; /* Prevent any potential overflow */
+}
+
+.hero-slide {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    text-align: center;
+    color: var(--white);
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: relative; /* Ensure content stays above image */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+}
+
+/* Carousel Controls Styling */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: linear-gradient(to right, rgba(26,35,126,0.3), transparent);
+}
+
+.hero:hover .carousel-control-prev,
+.hero:hover .carousel-control-next {
+    opacity: 0.8;
+}
+
+.carousel-indicators {
+    bottom: 40px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+    background-color: var(--primary-gold);
+    opacity: 0.5;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+    background-color: var(--primary-gold);
+}
+
+/* Animation for hero content */
+.carousel-item.active .hero-content h1 {
+    animation: fadeInDown 1s ease;
+}
+
+.carousel-item.active .hero-content p {
+    animation: fadeInUp 1s ease 0.3s;
+    animation-fill-mode: both;
+}
+
+.carousel-item.active .hero-content .hero-buttons {
+    animation: fadeInUp 1s ease 0.6s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Service Cards */
+.service-card {
+    background-color: var(--white);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    border-top: 4px solid var(--primary-gold);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+    color: var(--primary-navy);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-navy);
+    color: var(--white);
+}
+
+.footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.social-links a {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-gold);
+    border-color: var(--primary-gold);
+    color: var(--primary-navy);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-navy);
+    border-color: var(--primary-navy);
+    color: var(--white);
+}
+
+/* Announcements & Events Section */
+.announcements-section {
+    background-color: var(--primary-navy);
+    overflow: hidden;
+}
+
+.announcements-section .section-title {
+    color: var(--primary-gold);
+    font-weight: 600;
+}
+
+.announcement-carousel {
+    padding: 20px 0;
+}
+
+.announcement-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.announcement-card:hover {
+    transform: translateY(-5px);
+}
+
+.announcement-date {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--primary-gold);
+    color: var(--primary-navy);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1;
+}
+
+.announcement-date .day {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.announcement-date .month {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.announcement-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.announcement-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.announcement-card:hover .announcement-image img {
+    transform: scale(1.1);
+}
+
+.announcement-content {
+    padding: 20px;
+}
+
+.announcement-content h3 {
+    color: var(--primary-navy);
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.announcement-content p {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.announcement-content .time,
+.announcement-content .location {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.announcement-content i {
+    color: var(--primary-gold);
+    margin-right: 8px;
+}
+
+/* Swiper Navigation Styles */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-navy);
+    background: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 1.2rem;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-gold);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .announcement-card {
+        margin: 10px;
+    }
+}
+
+/* Pastor Section */
+.pastor-section {
+    background-color: var(--primary-navy);
+    width: 100%;
+    padding: 50px 0;
+}
+
+.section-title {
+    color: var(--white);  /* This will make the text white to contrast with the navy background */
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.pastor-card {
+    padding: 1.5rem;
+    background: var(--off-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 0 auto; 
+}
+
+.pastor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pastor-card img {
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.pastor-card h3 {
+    color: var(--primary-navy);
+    margin: 1rem 0;
+    font-weight: 600;
+}
+
+.pastor-card .lead {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.pastor-card .pastor-bio {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pastor-card {
+        margin-bottom: 2rem;
+    }
+    
+    .pastor-card img {
+        max-width: 200px;
+    }
+}
+
+/* Footer Styling */
+.footer {
+    background-color: var(--primary-navy) !important;
+    color: var(--white);
+}
+
+.footer h5 {
+    color: var(--primary-gold);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.footer a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--primary-gold);
+}
+
+/* Social Media Icons in Footer */
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-gold);
+    color: var(--primary-navy);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .pastor-section {
+        text-align: center;
+    }
+    
+    .pastor-section img {
+        margin-bottom: 2rem;
+    }
+    
+    .footer {
+        text-align: center;
+    }
+    
+    .footer .col-md-4 {
+        margin-bottom: 2rem;
+    }
+} 
+
+.nav-cta .btn-yellow {
+    background-color: var(--primary-gold);
+    color: var(--primary-navy);
+    font-weight: 600;
+    border: 2px solid var(--primary-gold);
+}
+
+.nav-cta .btn-yellow:hover {
+    background-color: var(--primary-navy);
+    color: var(--primary-gold);
+    border-color: var(--primary-gold);
+}
+
+.nav-cta .btn-outline-yellow {
+    background-color: transparent;
+    color: var(--primary-gold);
+    font-weight: 600;
+    border: 2px solid var(--primary-gold);
+}
+
+.nav-cta .btn-outline-yellow:hover {
+    background-color: var(--primary-gold);
+    color: var(--primary-navy);
+} 
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: var(--primary-navy);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+/* Optional: Add a shadow when scrolling */
+.navbar.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure nav links are visible on blue background */
+.navbar-nav .nav-link {
+    color: var(--white) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-gold) !important;
+}
+
+/* Style for active nav link */
+.navbar-nav .nav-link.active {
+    color: var(--primary-gold) !important;
+} 
+
+/* Add !important to override any existing styles */
+.navbar.navbar-dark {
+    background-color: rgba(14, 27, 50, 0.95) !important; /* Dark Navy */
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.swiper-container {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+    transition-timing-function: linear;
+}
+
+.announcement-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.service-times-section {
+    background-color: var(--off-white);
+}
+
+.service-times-section .section-title {
+    color: var(--primary-navy);  /* or var(--text-primary) for a different shade */
+}
+
+.service-time-card {
+    background: var(--secondary-yellow);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-time-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: var(--primary-gold);
+}
+
+.service-info h3 {
+    color: var(--primary-navy);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.time-location {
+    margin-bottom: 1.5rem;
+}
+
+.time-location p {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.time-location i {
+    color: var(--primary-gold);
+    margin-right: 0.5rem;
+}
+
+.service-time-card .btn {
+    border-color: var(--primary-navy);
+    color: var(--primary-navy);
+    transition: all 0.3s ease;
+}
+
+.service-time-card .btn:hover {
+    background-color: var(--primary-navy);
+    color: var(--white);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-time-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Sermons Section */
+.sermon-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.sermons .section-title {
+    color: var(--primary-navy);
+    font-weight: 600;
+}
+.sermon-card:hover {
+    transform: translateY(-5px);
+}
+
+.sermon-thumbnail {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    background: #f8f9fa;
+}
+
+.sermon-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sermon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sermon-card:hover .sermon-overlay {
+    opacity: 1;
+}
+
+.play-btn {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+    color: red;
+}
+
+.sermon-content {
+    padding: 1.5rem;
+}
+
+.sermon-title {
+    color: var(--primary-navy);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.sermon-date {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.sermon-description {
+    font-size: 0.95rem;
+    color: #495057;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sermon-actions {
+    display: flex;
+    justify-content: flex-start;
+    color: var(--primary-gold);
+}
+
+/* Modern Announcements Section */
+.announcement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.event-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.event-date {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.date-box {
+    background: var(--primary-navy);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 80px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.date-box .month {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--primary-gold);
+}
+
+.date-box .day {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 4px;
+}
+
+.event-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.05);
+}
+
+.event-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
+}
+
+.event-details {
+    padding: 1.5rem;
+}
+
+.event-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.event-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.event-title {
+    color: var(--primary-navy);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.event-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+}
+
+.event-link {
+    color: var(--primary-navy);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s ease;
+}
+
+.event-link:hover {
+    color: var(--primary-gold);
+    gap: 0.75rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .announcement-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .event-image {
+        height: 180px;
+    }
+}
+
+/* View All Events Button */
+.view-all-btn {
+    padding: 12px 30px;
+    font-weight: 600;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn i {
+    transition: transform 0.3s ease;
+}
+
+.view-all-btn:hover {
+    color: var(--primary-gold);
+    transform: translateX(5px);
+}
+
+.view-all-btn:hover i {
+    color: var(--primary-gold);
+    transform: translateX(5px);
+}
+
+/* About Page Styles */
+.about-hero {
+    background: linear-gradient(to right, var(--off-white) 60%, var(--primary-navy) 60%);
+    padding: 6rem 0;
+}
+
+.hero-title {
+    color: var(--primary-navy);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-text {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Beliefs Section */
+.beliefs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.belief-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.belief-card:hover {
+    transform: translateY(-5px);
+}
+
+.belief-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-navy);
+    color: var(--primary-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.belief-card h3 {
+    color: var(--primary-navy);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.belief-scripture {
+    margin-top: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Mission & Vision Cards */
+.mission-card, .vision-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.mission-card {
+    border-left: 5px solid var(--primary-navy);
+}
+
+.vision-card {
+    border-left: 5px solid var(--primary-gold);
+}
+
+.card-title {
+    color: var(--primary-navy);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.card-text {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .about-hero {
+        background: var(--off-white);
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .beliefs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* About Dropdown Styles */
+.dropdown-menu {
+    background: var(--white);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.dropdown-item {
+    color: var(--text-primary);
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--off-white);
+    color: var(--primary-navy);
+    padding-left: 2rem;
+}
+
+.dropdown-toggle::after {
+    transition: transform 0.3s ease;
+}
+
+.show .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+/* Page Hero Styles */
+.page-hero {
+    background: linear-gradient(to right, var(--off-white) 0%, var(--white) 100%);
+    padding-top: 120px;
+    margin-bottom: 2rem;
+}
+
+.page-hero .hero-title {
+    color: var(--primary-navy);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.page-hero .hero-text {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Mission Vision Page Specific */
+.mission-vision-content .card-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-navy);
+    color: var(--primary-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.mission-vision-content h2 {
+    color: var(--primary-navy);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .page-hero .hero-title {
+        font-size: 2rem;
+    }
+    
+    .page-hero .hero-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Core Values Styles */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.value-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+    max-width: 400px;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-navy);
+    color: var(--primary-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 1.5rem;
+}
+
+.value-text {
+    color: var(--text-secondary);
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.6;
+     
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--primary-navy);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-content: center; /* Center the button */
+}
+
+.read-more-btn:hover {
+    color: var(--primary-gold);
+    gap: 0.75rem;
+}
+
+/* Leadership Styles */
+.leadership-main {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.leader-image img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.leader-info {
+    padding: 2rem;
+}
+
+.leader-title {
+    color: var(--primary-gold);
+    margin: 1rem 0;
+}
+
+/* History Timeline Styles */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--primary-navy);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    width: 50%;
+}
+
+.timeline-marker {
+    position: absolute;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-gold);
+    border: 4px solid var(--primary-navy);
+    border-radius: 50%;
+}
+
+.timeline-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-right: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 0;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 2rem;
+    }
+    
+    .timeline-marker {
+        left: -10px;
+    }
+    
+    .timeline-content {
+        margin-right: 0;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+    
+    .value-card {
+        min-height: 300px; /* Smaller minimum height on mobile */
+    }
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 2px solid var(--off-white);
+    padding: 1.5rem;
+}
+
+.modal-title {
+    color: var(--primary-navy);
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Leadership Grid Styles */
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.leader-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.leader-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.leader-card .leader-image {
+    position: relative;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+    overflow: hidden;
+}
+
+.leader-card .leader-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.leader-card:hover .leader-image img {
+    transform: scale(1.05);
+}
+
+.leader-card .leader-info {
+    padding: 1.5rem;
+}
+
+.leader-card h3 {
+    color: var(--primary-navy);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.leader-card .leader-title {
+    color: var(--primary-gold);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.leader-card .leader-bio {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Modern History Styles */
+.history-cards {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.history-card {
+    background: var(--secondary-yellow);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 3rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.history-year {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-navy);
+    color: var(--primary-gold);
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+.history-image {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.history-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.history-card:hover .history-image img {
+    transform: scale(1.05);
+}
+
+.history-details {
+    padding: 2rem;
+}
+
+.history-details h3 {
+    color: var(--primary-navy);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.history-details p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .history-image {
+        height: 200px;
+    }
+    
+    .history-year {
+        top: 10px;
+        right: 10px;
+        font-size: 1rem;
+        padding: 0.4rem 1.2rem;
+    }
+    
+    .history-details {
+        padding: 1.5rem;
+    }
+    
+    .history-details h3 {
+        font-size: 1.3rem;
+    }
+    
+    .history-details p {
+        font-size: 1rem;
+    }
+}
+
+.gallery img {
+    border-radius: 10px; /* Rounded corners for images */
+    max-height: 500px; /* Limit the height of images */
+    object-fit: cover; /* Ensure images cover the area */
+}
+
+.leader-section img {
+    max-width: 200px; /* Limit the size of the leader's image */
+    border-radius: 50%; /* Make the image circular */
+}
+
+.hero-text {
+    max-width: 600px; /* Adjust this value as needed */
+    line-height: 1.5; /* Adjust line height for better readability */
+}
